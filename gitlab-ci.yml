@@ -1,0 +1,7 @@
+image: hseeberger/scala-sbt:11.0.9.1_1.4.5_2.13.4
+
+test:
+  script:
+    - sbt compile
+    - sbt --error "export fullClasspath" > classpath.txt
+
