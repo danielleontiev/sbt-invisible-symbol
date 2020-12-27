@@ -14,7 +14,7 @@ jobs:
     - name: Compile
       run: sbt compile
     - name: Classpath
-      run: sbt --error fullClasspath > out.txt
+      run: sbt --error "export fullClasspath" > out.txt
     - name: Upload
       uses: actions/upload-artifact@v1
       with:
